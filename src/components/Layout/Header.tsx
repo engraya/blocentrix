@@ -8,11 +8,10 @@ const Header = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     const navLinks = [
-        { to: '/', label: 'Home' },
-        { to: '/products', label: 'Products' },
-        { to: '/about', label: 'About' },
-        { to: '/why-us', label: 'Why Us' },
-        { to: '/contact', label: 'Contact' }
+        { to: '#', label: 'Products' },
+        { to: '#', label: 'About' },
+        { to: '#', label: 'Why Us' },
+        { to: '#', label: 'Contact' }
     ];
 
     return (
