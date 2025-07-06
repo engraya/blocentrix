@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <>
       <StayUpdated />
-      <footer className="self-stretch min-h-[400px] sm:min-h-[500px] md:h-80 py-8 sm:py-12 md:py-16 bg-purple-100 rounded-tl-[16px] sm:rounded-tl-[24px] md:rounded-tl-[32px] rounded-tr-[16px] sm:rounded-tr-[24px] md:rounded-tr-[32px] inline-flex flex-col justify-start items-center">
+      <footer className="self-stretch py-8 sm:py-12 md:py-16 bg-purple-100 rounded-tl-[16px] sm:rounded-tl-[24px] md:rounded-tl-[32px] rounded-tr-[16px] sm:rounded-tr-[24px] md:rounded-tr-[32px] inline-flex flex-col justify-start items-center">
         <div className="w-full max-w-[1296px] px-4 sm:px-6 flex flex-col justify-start items-start">
           <div className="self-stretch flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 lg:gap-0">
             {/* Left Column */}
