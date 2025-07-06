@@ -11,11 +11,11 @@ const HeaderSecondary = () => {
 
   return (
     <div className="w-full bg-white">
-      <div className="self-stretch py-6 flex flex-col justify-start items-center">
-        <div className="w-full max-w-[1296px] px-6 flex flex-col justify-start items-start">
-          <div className="self-stretch inline-flex justify-start items-center gap-[473.78px] lg:gap-[473.78px] md:gap-8 sm:gap-4">
-            <div className="flex-1 flex justify-start items-center gap-4">
-              <div className="pr-6 inline-flex flex-col justify-start items-start">
+      <div className="self-stretch py-4 sm:py-6 flex flex-col justify-start items-center">
+        <div className="w-full max-w-[1296px] px-4 sm:px-6 flex flex-col justify-start items-start">
+          <div className="self-stretch inline-flex justify-between items-center">
+            <div className="flex justify-start items-center gap-2 sm:gap-4">
+              <div className="pr-2 sm:pr-6 inline-flex flex-col justify-start items-start">
                 <div className="self-stretch pt-[3.17px] inline-flex justify-start items-start">
                   <Link to="/" className="flex justify-start items-start overflow-hidden hover:opacity-80 transition-opacity duration-200 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="168" height="33" viewBox="0 0 168 33" fill="none" className="w-32 h-6 sm:w-40 sm:h-8 md:w-48 md:h-9 lg:w-[168px] lg:h-[33px]">
