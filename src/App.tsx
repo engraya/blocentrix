@@ -1,22 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
+import LayoutSecondary from './components/Layout/LayoutSecondary';
 import Home from './pages/Home';
-import About from './pages/About';
-import WhyUs from './pages/WhyUs';
-import Products from './pages/Products';
 import Contact from './pages/Contact';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout children={undefined} />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="why-us" element={<WhyUs />} />
-          <Route path="products" element={<Products />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
+        {/* Home route with hero section */}
+        <Route path="/" element={<Layout children={<Home />} />} />
+        
+        {/* Other routes with secondary layout */}
+        <Route path="/contact" element={<LayoutSecondary children={<Contact />} />} />
       </Routes>
     </Router>
   );

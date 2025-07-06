@@ -1,52 +1,59 @@
-import React, { useState } from 'react';
-
 export const StayUpdated = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle subscription logic here
-    console.log('Subscribing email:', email);
-    setEmail('');
-  };
-
   return (
-    <div className="self-stretch py-16 bg-gradient-to-b from-purple-800 to-purple-500 flex flex-col justify-start items-center">
-      <div className="w-full max-w-[768px] px-6 flex flex-col justify-start items-start gap-4">
-        <div className="self-stretch flex flex-col justify-start items-center">
-          <h2 className="self-stretch text-center text-white text-2xl lg:text-3xl font-bold leading-9">
-            Stay Updated on Blockchain Innovations
-          </h2>
-        </div>
-        <div className="self-stretch flex flex-col justify-start items-center">
-          <p className="self-stretch text-center text-white/80 text-sm lg:text-base font-normal leading-normal px-4 lg:px-0">
-            Subscribe to our newsletter for the latest updates, industry insights, and exclusive offers.
-          </p>
-        </div>
-        <form onSubmit={handleSubscribe} className="self-stretch pt-4 flex flex-col lg:flex-row justify-center items-center gap-4">
-          <div className="self-stretch w-full lg:min-w-80 px-4 py-3.5 bg-white rounded-lg flex flex-col justify-start items-start overflow-hidden">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              className="w-full text-gray-600 text-sm lg:text-base font-normal focus:outline-none"
-              required
-            />
+    <div className="self-stretch py-12 sm:py-16 inline-flex flex-col justify-start items-center rounded-t-3xl" style={{background: 'var(--Footer-gradient, linear-gradient(132deg, var(--color-Purple-700, #3E2E99) -13.32%, var(--color-Purple-900, #251B5B) 50.3%))'}}>
+      <div className="w-full max-w-[1296px] px-6 flex flex-col justify-start items-start">
+        <div className="self-stretch min-h-[200px] sm:min-h-[250px] md:h-32 relative">
+          {/* Mobile/Tablet Layout - Stacked */}
+          <div className="lg:hidden flex flex-col justify-start items-center gap-6 sm:gap-8 w-full">
+            <div className="w-full flex flex-col justify-start items-center">
+              <div className="self-stretch justify-center text-center">
+                <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-[66.90px]">
+                  Let's Build the Future<br className="lg:hidden" />{" "}
+                </span>
+                <span className="text-purple-200 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-[66.90px]">
+                  Together
+                </span>
+              </div>
+            </div>
+            <div className="w-full flex flex-col justify-start items-center gap-6">
+              <div className="self-stretch flex flex-col justify-start items-center">
+                <div className="self-stretch justify-center text-center text-gray-100 text-base sm:text-lg font-normal leading-relaxed">
+                  Have a blockchain vision for your industry?<br className="lg:hidden" /> Partner with us, integrate our products,<br className="lg:hidden" /> or invest in the future.
+                </div>
+              </div>
+              <div className="self-stretch inline-flex justify-center items-center">
+                <button 
+                  className="w-full px-8 py-3 bg-white rounded-[300px] shadow-[0px_4px_8px_0px_rgba(77,145,225,0.10)] outline outline-1 outline-offset-[-1px] outline-white flex justify-center items-center hover:bg-gray-50 hover:shadow-[0px_6px_12px_0px_rgba(77,145,225,0.15)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-[#0B1938]"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  <span className="text-center text-color-green-7 text-base font-semibold leading-tight">Contact us</span>
+                </button>
+              </div>
+            </div>
           </div>
-          <button
-            type="submit"
-            className="w-full lg:w-auto px-6 py-3 bg-white rounded-lg flex justify-center items-center hover:bg-gray-50 transition-colors duration-200"
-          >
-            <span className="text-center text-purple-600 text-sm lg:text-base font-medium leading-normal">
-              Subscribe
-            </span>
-          </button>
-        </form>
-        <div className="self-stretch flex flex-col justify-start items-center">
-          <p className="self-stretch text-center text-white/60 text-xs lg:text-sm font-normal leading-tight px-4 lg:px-0">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
+
+          {/* Desktop Layout - Side by Side */}
+          <div className="hidden lg:block w-full h-full relative">
+            <div className="w-[484px] pb-[0.83px] left-0 top-[-1.06px] absolute inline-flex flex-col justify-start items-start">
+              <div className="self-stretch justify-center">
+                <span className="text-white text-6xl font-normal leading-[66.90px]">Let's Build the Future </span>
+                <span className="text-purple-200 text-6xl font-normal leading-[66.90px]">Together</span>
+              </div>
+            </div>
+            <div className="w-[510px] max-w-[510px] left-[738px] top-[4.89px] absolute inline-flex flex-col justify-start items-start gap-6">
+              <div className="self-stretch flex flex-col justify-start items-start">
+                <div className="self-stretch justify-center text-gray-100 text-lg font-normal leading-relaxed">Have a blockchain vision for your industry? Partner with us, integrate our products, or invest in the future.</div>
+              </div>
+              <div className="self-stretch inline-flex justify-start items-center gap-4">
+                <button 
+                  className="px-8 py-3 bg-white rounded-[300px] shadow-[0px_4px_8px_0px_rgba(77,145,225,0.10)] outline outline-1 outline-offset-[-1px] outline-white flex justify-center items-center hover:bg-gray-50 hover:shadow-[0px_6px_12px_0px_rgba(77,145,225,0.15)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-[#0B1938]"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  <span className="text-center text-color-green-7 text-base font-semibold leading-tight">Contact us</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
